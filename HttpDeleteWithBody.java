@@ -67,6 +67,6 @@ class HttpDeleteWithBody extends HttpEntityEnclosingRequestBase {
     	assetMap.put("tagNames", tagList);
     	String json = new ObjectMapper().writeValueAsString(assetMap);
     	System.out.println("AssetMap "+json);
-    	sendDelete("http://datanomist.in:4400/rest/2.0/assets/c920b389-3771-41f8-a93e-b283e5db19c7/tags", json.toString());
+    	sendDelete("{PathToDGC}/rest/2.0/assets/{AssetID}/tags", json.toString());
 	}
 }
